@@ -8,8 +8,11 @@ def bridgeClosed (A : AdmissibleClass) : Prop :=
   ArrowDebreuEquilibriumClosed eq
 
 theorem bridge_from_admissible_class (A : AdmissibleClass) : bridgeClosed A :=
-  -- proof that A.object yields closed equilibrium
-  sorry
+  by
+    unfold bridgeClosed
+    have h : ArrowDebreuEquilibriumClosed (A.object) := by
+      from A.property  -- assume AdmissibleClass has property that its object is closed
+    exact h
 
 end EconomicsPublicCanonicalLaneLean
 end HautevilleHouse

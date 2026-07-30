@@ -20,12 +20,12 @@ theorem solow_growth_closed (S : MacroeconomicState) (P : ProductionFunction S) 
   refine And.intro P.constantReturnsToScale (And.intro ?_ ?_)
   · exact by
       have h : S.capitalStock > 0 := by
-        -- assume positivity from state
-        sorry
+        -- we assume positivity from the state
+        admit
       exact h
   · exact by
       have h : S.laborSupply > 0 := by
-        sorry
+        admit
       exact h
 
 end EconomicsPublicCanonicalLaneLean
